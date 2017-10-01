@@ -4,7 +4,7 @@ var twitterHelper = require('./lib/twitter-helper.js');
 var fileWriter = require('./lib/file-writer.js');
 var markovTwitter = new markovTwitterHelper();
 var frequencyInMinutes = 8;
-var minTweetCount = 200;
+var minTweetCount = 50;
 var twitterPostHelper;
 var twitterConfig = require('./config/matt-twitter-apps.json');
 var filters = [
@@ -43,7 +43,7 @@ function getStreamTweets(config,searchKey,callback){
                     newTweets.push(newTweet.text.replace(/\n/g,' '));                    
                 }
             }
-            if(newTweets.length >= 100){
+            if(newTweets.length >= 150){
                 var tempTweets = newTweets.slice(0);
                 newTweets = [];
                 console.log('pushing tweets to',fileName)
