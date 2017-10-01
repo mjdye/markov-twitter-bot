@@ -113,7 +113,7 @@ function execute(){
             if(thisTwitterApp.hashtag != false && thisTwitterApp.access_token_key.length > 0 && thisTwitterApp.access_token_secret.length > 0){
                 postTweet(twitterPostHelper,thisTwitterApp)
                 getStreamTweets(thisTwitterApp);
-                setTimeout(function(){
+                setInterval(function(){
                     console.log(thisTwitterApp.hashtag)
                     postTweet(twitterPostHelper,thisTwitterApp)
                 }, frequencyInMinutes*60*1000);
