@@ -1,0 +1,19 @@
+{
+  "name": "markov-twitter-bot",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.124.0",
+    "node-markovify": "1.0.1",
+    "twitter": "^1.7.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Matt Dye",
+  "license": "MIT",
+  "homepage": "https://github.com/mjdye/markov-twitter-bot#readme",
+  "bugs": {
+    "url": "https://github.com/mjdye/markov-twitter-bot/issues"
+  }
+}

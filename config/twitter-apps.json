@@ -1,0 +1,17 @@
+{
+    "apps" : [
+        {
+            "consumer_key" : "",
+            "consumer_secret" : "",
+            "access_token_key" : "",
+            "access_token_secret" : "",
+            "hashtag" : ""
+        }
+    ],
+    "postApp" : {
+        "consumer_key" : "3eQStU4Lb5MZbr6ewlskrPP90",
+        "consumer_secret" : "7xainPvrx0GqdWK6bDE3nvzkNXhm0Ale3LCMyUSCKrcjFsHIWx",
+        "access_token_key" : "183662815-gA4MDQMhNIP1ZBHWEMOE5CiBMv8ovH1mpwkLs64t",
+        "access_token_secret" : "NTV6bsdSmGXQT46kQpoMGQHDw9TQjjWshluheDQXx0MzA"
+    }
+}
