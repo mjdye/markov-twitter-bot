@@ -3,8 +3,8 @@ var markovTwitterHelper = require('./lib/markov-twitter-helper.js');
 var twitterHelper = require('./lib/twitter-helper.js');
 var fileWriter = require('./lib/file-writer.js');
 var markovTwitter = new markovTwitterHelper();
-var frequencyInMinutes = 10;
-var minTweetCount = 100;
+var frequencyInMinutes = 7;
+var minTweetCount = 200;
 
 var twitterConfig = require('./config/matt-twitter-apps.json');
 var filters = [
@@ -111,10 +111,9 @@ function execute(){
         thisTwitterApp = JSON.parse(JSON.stringify(twitterApps[i]));        
         (function(thisTwitterApp){
             if(thisTwitterApp.hashtag != false && thisTwitterApp.access_token_key.length > 0 && thisTwitterApp.access_token_secret.length > 0){
-                postTweet(twitterPostHelper,thisTwitterApp)
+                console.log('Getting Tweets for',thisTwitterApp.hashtag)                
                 getStreamTweets(thisTwitterApp);
                 setInterval(function(){
-                    console.log(thisTwitterApp.hashtag)
                     postTweet(twitterPostHelper,thisTwitterApp)
                 }, frequencyInMinutes*60*1000);
             }
