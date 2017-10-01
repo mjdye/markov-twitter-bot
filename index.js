@@ -3,7 +3,7 @@ var markovTwitterHelper = require('./lib/markov-twitter-helper.js');
 var twitterHelper = require('./lib/twitter-helper.js');
 var fileWriter = require('./lib/file-writer.js');
 var markovTwitter = new markovTwitterHelper();
-var frequencyInMinutes = 7;
+var frequencyInMinutes = 8;
 var minTweetCount = 200;
 
 var twitterConfig = require('./config/matt-twitter-apps.json');
