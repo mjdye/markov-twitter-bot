@@ -5,7 +5,7 @@ var fileWriter = require('./lib/file-writer.js');
 var markovTwitter = new markovTwitterHelper();
 var frequencyInMinutes = 8;
 var minTweetCount = 200;
-
+var twitterPostHelper;
 var twitterConfig = require('./config/matt-twitter-apps.json');
 var filters = [
     'boycott',
@@ -100,7 +100,7 @@ function execute(){
     var twitterApps = twitterConfig.apps;
     var thisTwitterApp;
 
-    var twitterPostHelper = new twitterHelper({
+    twitterPostHelper = new twitterHelper({
         consumer_key : config.postApp.consumer_key,
         consumer_secret : config.postApp.consumer_secret,
         access_token_key : config.postApp.access_token_key,
@@ -113,7 +113,7 @@ function execute(){
             if(thisTwitterApp.hashtag != false && thisTwitterApp.access_token_key.length > 0 && thisTwitterApp.access_token_secret.length > 0){
                 console.log('Getting Tweets for',thisTwitterApp.hashtag)                
                 getStreamTweets(thisTwitterApp);
-postTweet(twitterPostHelper,thisTwitterApp)
+                postTweet(twitterPostHelper,thisTwitterApp)
                 setInterval(function(){
                     postTweet(twitterPostHelper,thisTwitterApp)
                 }, frequencyInMinutes*60*1000);
