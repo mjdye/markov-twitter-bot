@@ -1,0 +1,55 @@
+{
+    "apps" : [
+        {
+            "appName" : "Marovify The NFL",
+            "consumer_key" : "3eQStU4Lb5MZbr6ewlskrPP90",
+            "consumer_secret" : "7xainPvrx0GqdWK6bDE3nvzkNXhm0Ale3LCMyUSCKrcjFsHIWx",
+            "access_token_key" : "183662815-gA4MDQMhNIP1ZBHWEMOE5CiBMv8ovH1mpwkLs64t",
+            "access_token_secret" : "NTV6bsdSmGXQT46kQpoMGQHDw9TQjjWshluheDQXx0MzA",
+            "hashtag" : "PITvsBAL"
+        },{
+            "appName" : "Marovify The NFL 2",
+            "consumer_key" : "QnzC3ZkVhbLRnLPZ33bov7HSQ",
+            "consumer_secret" : "c7tH3w6nFp0Bplb0IyBdOMUTbU6F5O78qQrhDc42ZLTx9yU2Rv",
+            "access_token_key" : "913555672318513152-i9LIJHjHOniGSCYeZ8goXA6za1sJ6u3",
+            "access_token_secret" : "KuEawgKVslLS7dSzyEaUsO37OkBBawQkbGL6ZmAuJTjiv",
+            "hashtag" : "CARvsNE"
+        },{
+            "appName" : "Marovify The NFL 3",
+            "consumer_key" : "WyRbLWzynAs2SGNROfdQE8t4u",
+            "consumer_secret" : "QCiApZIJJzLM9JOMJ9qflxBXp3TIIma2NmCZJRR0og8lnhabtz",
+            "access_token_key" : "913555672318513152-0fFZRAdkTLOOhlroaIKpRzyPD24N8kF",
+            "access_token_secret" : "Gg89Aj0YnKuIQ1SEZqaHs4yHcw9AGB729INFHpTOCPriv",
+            "hashtag" : "DETvsMIN"
+        },{
+            "appName" : "Marovify The NFL 4",
+            "consumer_key" : "zHmJ7ABPVJRE4qRRaORtccqho",
+            "consumer_secret" : "nqOq3EVlOLcvQeg0tAWAoS5xaLjUwwEzmuxZ6ZTwuCSG71uPqo",
+            "access_token_key" : "913555672318513152-AtBTGAO5YekKxifCTy5i5BBx7ElWFYI",
+            "access_token_secret" : "0f1AweTnCloRYSfSPFGkmfnOp7STsLQcZ2yN9BLG5IDXe",
+            "hashtag" : "BUFvsATL"
+        },{
+            "appName" : "Marovify The NFL 5",
+            "consumer_key" : "",
+            "consumer_secret" : "",
+            "access_token_key" : "",
+            "access_token_secret" : "",
+            "hashtag" : false
+        }
+    ],
+    "collegepostApp" : {
+        "appName" : "MarovifyCFB",
+        "consumer_key" : "WigCHpxZjL4ws9xGbMj5xYoUF",
+        "consumer_secret" : "iJSwJuDEnVrZtGKJic0xbRhN0BhkGD0CB9B5icO4wC2PNxGDJI",
+        "access_token_key" : "914144798784856065-BBgtcuWj379Qw6xGthYEzkPOSZfwpCL",
+        "access_token_secret" : "f1xAQ1hmP7w7PaDspQCT3rC1xyPEsdDNOQCEx59Ok8bVv"
+    },
+    "postApp":{
+	"consumer_key" : "3eQStU4Lb5MZbr6ewlskrPP90",
+	"consumer_secret" : "7xainPvrx0GqdWK6bDE3nvzkNXhm0Ale3LCMyUSCKrcjFsHIWx",
+	"access_token_key" : "183662815-gA4MDQMhNIP1ZBHWEMOE5CiBMv8ovH1mpwkLs64t",
+	"access_token_secret" : "NTV6bsdSmGXQT46kQpoMGQHDw9TQjjWshluheDQXx0MzA",
+ 
+    }
+
+}
