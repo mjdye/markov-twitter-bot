@@ -48,7 +48,7 @@ function getStreamTweets(config,searchKey,callback){
                 newTweets = [];
                 console.log('pushing tweets to',fileName)
                 fileWriter.putTweetFile(fileName,tempTweets,function(response){
-                    
+                    postTweet(twitterPostHelper,thisTwitterHelper)
                 })
             }
         }
@@ -113,10 +113,9 @@ function execute(){
             if(thisTwitterApp.hashtag != false && thisTwitterApp.access_token_key.length > 0 && thisTwitterApp.access_token_secret.length > 0){
                 console.log('Getting Tweets for',thisTwitterApp.hashtag)                
                 getStreamTweets(thisTwitterApp);
-                postTweet(twitterPostHelper,thisTwitterApp)
-                setInterval(function(){
-                    postTweet(twitterPostHelper,thisTwitterApp)
-                }, frequencyInMinutes*60*1000);
+                // setInterval(function(){
+                    
+                // }, frequencyInMinutes*60*1000);
             }
         })(thisTwitterApp)
         
