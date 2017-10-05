@@ -68,9 +68,13 @@ function createMarkovTweets(config,callback){
             config.popularFirstWord = true;
             markovTwitter.generateMarkovTweets(config,function(tweets){
                 for(var i = 0; i < tweets.length; i++){
-                    if(tweets[i].toLowerCase().indexOf(config.hashtag.toLowerCase()) == -1){
-                        tweets[i] = tweets[i] + ' #' + config.hashtag;
+                    var temp = config.hashtag.split(',');
+                    for(var j = 0; j < temp.length; j++){
+                        if(tweets[i].toLowerCase().indexOf(temp[j]) == -1){
+                            tweets[i] = tweets[i] + ' #' + temp[j];
+                        }
                     }
+                    
                 }
                 callback(tweets[0]);
             })
