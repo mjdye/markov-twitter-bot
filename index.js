@@ -4,9 +4,9 @@ var twitterHelper = require('./lib/twitter-helper.js');
 var fileWriter = require('./lib/file-writer.js');
 var markovTwitter = new markovTwitterHelper();
 var frequencyInMinutes = 8;
-var minTweetCount = 50;
+var minTweetCount = 0;
+var maxTweetCount = 500;
 var twitterPostHelper;
-var maxTweetCount = 750;
 var twitterConfig = require('./config/matt-twitter-apps.json');
 var filters = [
     'boycott',
@@ -23,7 +23,8 @@ function getStreamTweets(config,searchKey,callback){
         consumer_secret : config.consumer_secret,
         access_token_key : config.access_token_key,
         access_token_secret : config.access_token_secret
-    })
+    });
+    thisTwitterHelper.hashtag = search;
 
     var newTweets = [];
     var newTweetText = [];
@@ -65,12 +66,13 @@ function createMarkovTweets(config,callback){
             config.tweets = tweetArray;
             config.numTweetsToPredict = 1;
             config.state_size = 1;
-            config.popularFirstWord = true;
+            config.popularFirstWord = false;
             markovTwitter.generateMarkovTweets(config,function(tweets){
+                console.log(tweets)
                 for(var i = 0; i < tweets.length; i++){
                     var temp = config.hashtag.split(',');
                     for(var j = 0; j < temp.length; j++){
-                        if(tweets[i].toLowerCase().indexOf(temp[j]) == -1){
+                        if(tweets[i].toLowerCase().indexOf(temp[j].toLowerCase()) == -1){
                             tweets[i] = tweets[i] + ' #' + temp[j];
                         }
                     }
@@ -97,6 +99,8 @@ function postTweet(twitterPostHelper,twitterApp){
             twitterPostHelper.postTweet(tweet,function(){
                 console.log('posted',tweet)
             })
+        } else{
+            console.log('could not make a tweet')
         }
     });
 }
