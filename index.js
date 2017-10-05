@@ -6,6 +6,7 @@ var markovTwitter = new markovTwitterHelper();
 var frequencyInMinutes = 8;
 var minTweetCount = 50;
 var twitterPostHelper;
+var maxTweetCount = 750;
 var twitterConfig = require('./config/matt-twitter-apps.json');
 var filters = [
     'boycott',
@@ -43,7 +44,7 @@ function getStreamTweets(config,searchKey,callback){
                     newTweets.push(newTweet.text.replace(/\n/g,' '));                    
                 }
             }
-            if(newTweets.length >= 150){
+            if(newTweets.length >= maxTweetCount){
                 var tempTweets = newTweets.slice(0);
                 newTweets = [];
                 console.log('pushing tweets to',fileName)
@@ -63,7 +64,8 @@ function createMarkovTweets(config,callback){
             config.tweetText = tweetArray.join('\n');
             config.tweets = tweetArray;
             config.numTweetsToPredict = 1;
-            config.state_size = 2;
+            config.state_size = 1;
+            config.popularFirstWord = true;
             markovTwitter.generateMarkovTweets(config,function(tweets){
                 for(var i = 0; i < tweets.length; i++){
                     if(tweets[i].toLowerCase().indexOf(config.hashtag.toLowerCase()) == -1){
